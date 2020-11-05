@@ -23,30 +23,15 @@
     @content
 
 
-
-@mixin min_1200
-  @media (min-width: 1200px)
+@mixin min-max($min, $max)
+  @media (min-width: $min) and (max-width: $max)
     @content
 
-@mixin min_992
-  @media (min-width: 992px)
+
+@mixin min($min)
+  @media (min-width: $min)
     @content
 
-@mixin min_768
-  @media (min-width: 767px)
-    @content
-
-@mixin min_640
-  @media (min-width: 640px)
-    @content
-
-@mixin min_600
-  @media (min-width: 600px)
-    @content
-
-@mixin min_576
-  @media (min-width: 576px)
-    @content
 
 @mixin smart-hover()
   @media (hover: hover) and (pointer: fine)

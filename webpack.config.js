@@ -11,7 +11,7 @@ const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plug
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
 
-const filename = ext => (isDev ? `[name].${ext}` : `[name].[fullhash].${ext}`);
+const filename = ext => (isDev ? `[name].${ext}` : `[name].[hash].${ext}`);
 
 const optimization = () => {
   const config = {
@@ -79,16 +79,17 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.json'], 
     alias: {
-      '@modules': `${PATHS.src}/modules`,
+      '@blocks': `${PATHS.src}/blocks`,
       '@': PATHS.src,
     },
   },
   optimization: optimization(),
   devServer: {
-    port: 4200,
-    hot: isDev,
-    open: isDev,
-    publicPath: '',
+    port: 5500,
+		// host: '192.168.0.14',
+		// hot: isDev,
+		inline: isDev,
+		publicPath: '',
   },
   devtool: isDev ? 'source-map' : 'nosources-source-map',
   plugins: [
@@ -115,7 +116,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: `css/${filename('css')}`,
     }),
-    new webpack.HotModuleReplacementPlugin(),
+    // new webpack.HotModuleReplacementPlugin(),
   ],
   module: {
     rules: [
