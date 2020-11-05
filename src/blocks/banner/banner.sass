@@ -1,0 +1,167 @@
+.banner
+  padding-top: 24px
+  &__wrapper
+    position: relative
+    z-index: 10
+    overflow: hidden
+    display: flex
+    padding-bottom: 20px
+    max-width: 100%
+    height: 899px
+    background: linear-gradient(180deg, rgba(238, 238, 238, 0.0001) 47.32%, #E8EAE9 65.51%),
+    no-repeat 50% 53% url('./assets/image/banner__background.png')
+    
+
+    +min(576px)
+      max-width: 93%
+    +min(768px)
+      max-width: 728px
+    +min(848px)
+      max-width: 828px
+    +min(992px)
+      max-width: 980px
+    +min(1200px)
+      max-width: 1180px
+    +min(1440px)
+      max-width: 1280px
+  &__info
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin: auto auto 0 auto
+  &__hashtag
+    padding: 2px 26.62px
+    margin-bottom: 27px
+    font-style: normal
+    font-weight: 600
+    font-size: 14px
+    line-height: 20px
+    text-align: center
+    color: #36B37E
+    background-color: rgba(54, 179, 126, 0.1)
+    border-radius: 2000px
+  &__title
+    margin-bottom: 20px
+    font-family: 'HK Grotesk'
+    font-style: normal
+    font-weight: bold
+    font-size: 32px
+    line-height: 40px
+    text-align: center
+    letter-spacing: 0.2px
+    color: $blue-dark
+  &__text
+    padding: 0 20px
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 24px
+    font-style: normal
+    font-weight: normal
+    font-size: 16px
+    line-height: 28px
+    text-align: center
+    color: $text
+  &__button
+    margin-bottom: 22px
+  &__tags
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+  &__tag
+    margin-right: 16px
+    margin-bottom: 16px
+  &-tag
+    display: flex
+    align-items: center
+    &__image
+      +box(24px)
+      margin-right: 8px
+      object-fit: cover
+    &__text
+      font-family: HK Grotesk
+      font-style: normal
+      font-weight: 500
+      font-size: 16px
+      line-height: 20px
+      letter-spacing: 0.2px
+      color: $blue-dark
+
++min(576px)
+  .banner
+    &__wrapper
+      height: 624px
+      padding: 36px 28px
+      border-radius: 8px
+      background-position: 17% 31%
+    &__info
+      margin: 0
+      align-items: flex-start
+    &__hashtag
+      margin-bottom: 24px
+      padding: 6px 16px
+    &__title
+      font-size: 48px
+      line-height: 60px
+      text-align: start
+    &__text
+      max-width: 404px
+      margin: 0 0 36.5px 0
+      text-align: start
+      font-size: 18px
+      line-height: 32px
+      padding: 0
+    &__button
+      margin-bottom: 40.5px
+    &__tag
+      margin-bottom: 0
+      margin-right: 21px
+    &-tag
+      &__image
+        +box(36px)
+
++min(768px)
+  .banner
+    padding-top: 30px
+    &__wrapper
+      background: linear-gradient(270deg, rgba(238, 238, 238, 0.0001) 67.34%, #E8EAE9 100%), 
+      no-repeat 2% 39% url('./assets/image/banner__background.png')
+      background-color:  #E8EAE9
+
+
+
++min(848px)
+  .banner
+    &__wrapper
+      background-position: -12% 39%
+
++min(992px)
+  .banner
+    &__wrapper
+      background-position: -60% 39%
+
+
++min(1200px)
+  .banner
+    &__wrapper
+      height: 700px
+      padding: 62px 107px 46px
+      background-position: 329% 39%
+    &__hashtag
+      margin-bottom: 28px
+    &__title
+      margin-bottom: 28px
+      font-size: 56px
+      line-height: 68px
+    &__text
+      margin-bottom: 52px
+    &__button
+      padding: 15px 40px
+      margin-bottom: 48.5px
+    &__text
+      max-width: 580px
+      
++min(1440px)
+  .banner
+    &__wrapper
+      background-position: 158% 39%
+
