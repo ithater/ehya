@@ -1,0 +1,59 @@
+.button-more
+  display: inline-flex
+  flex-direction: column
+  align-items: center
+  +box(48.2758%, 170px)
+  border: none
+  border-radius: 8px
+  background-color: $blue-toxic
+  &__image
+    margin-top: 40px
+    +box(25px)
+  &__text
+    margin-top: 15px
+    font-family: HK Grotesk
+    font-feature-settings: "locl" 0
+    font-style: normal
+    font-weight: bold
+    font-size: 17px
+    line-height: 20px
+    text-align: center
+    letter-spacing: 0.2px
+    color: #FAFAFB
+  @include min(375px)
+    height: 200px
+
+  @include min(425px)
+    height: 250px
+    &__image
+      margin-top: 50px
+      +box(28px)
+    &__text
+      max-width: 219px
+      margin-top: 25px
+      font-size: 24px
+      line-height: 32px
+
+  @include min(576px)
+    height: 300px
+
+  @include min(768px)
+    +box(280px, 350px)
+    &__image
+      margin-top: 120px
+      +box(28px)
+    &__text
+      margin-top: 25px
+      font-size: 24px
+      line-height: 32px
+
+  @include min(992px)
+    width: 215px
+    &__text
+      padding: 0 10px
+
+  @include min(1200px)
+    width: 245px
+
+  @include min(1440px)
+    width: 260px

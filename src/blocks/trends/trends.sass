@@ -1,0 +1,193 @@
+.trends
+  padding-top: 55px
+  &__wrapper
+    display: flex
+    flex-direction: column
+    @include min(768px)
+      max-width: 608px
+  &__title
+    font-family: HK Grotesk
+    font-feature-settings: "locl" 0
+    font-style: normal
+    font-weight: bold
+    font-size: 28px
+    line-height: 36px
+    text-align: center
+    letter-spacing: 0.2px
+    margin-bottom: 24px
+    color: $blue-dark
+  &__holder
+    display: flex
+    flex-direction: column
+    margin-bottom: 36px
+  &-nav
+    display: flex
+    justify-content: center
+    &__link
+      font-style: normal
+      font-weight: normal
+      font-size: 16px
+      line-height: 22px
+      color: $text
+      text-decoration: none
+      &:not(:last-child)
+        margin-right: 16px
+      &::after
+        content: ''
+        display: block
+        width: 0%
+        opacity: 0
+        height: 1px
+        background-color: $text
+      @include smart-hover
+        &::after
+          transition: .2s
+        &:hover
+          &::after
+            opacity: 1
+            width: 100%
+      &--active
+        font-weight: bold
+        color: $blue-dark
+        &::after
+          height: 2px
+          background-color: $blue-dark
+
+  &-products
+    display: flex
+    padding: 0
+    margin: 0
+    flex-wrap: wrap
+    list-style: none
+    justify-content: space-between
+    &__product
+      margin-bottom: 24px
+    &-product
+      display: flex
+      flex-direction: column
+      width: 48.2758%
+      &__link
+        text-decoration: none
+      &__image
+        height: 170px
+        border-radius: 8px
+        margin-bottom: 13px
+        object-fit: cover
+      &__title
+        margin-bottom: 3px
+        font-family: HK Grotesk
+        font-feature-settings: "locl" 0
+        font-style: normal
+        font-weight: bold
+        font-size: 16px
+        line-height: 20px
+        letter-spacing: 0.2px
+        color: $blue-dark
+      &__price
+        display: flex
+        align-items: center
+      &__pricetag
+        margin-right: 9px
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 24px
+        color: $text
+      &__buy-icon
+        +box(14px)
+
+@include min(375px)
+  .trends
+    &-products
+      &-product
+        &__image
+          height: 200px
+
+@include min(425px)
+  .trends
+    &-products
+      &-product
+        &__image
+          height: 250px
+
+@include min(576px)
+  .trends
+    &-products
+      &-product
+        &__image
+          height: 300px
+
+
+@include min(768px)
+  .trends
+    padding-top: 40px
+    &__title
+      font-size: 48px
+      line-height: 60px
+    &__holder
+      margin-bottom: 55.5px
+    &-nav
+      &__link
+        font-size: 18px
+        line-height: 25px
+    &-products
+      &__product
+        margin-bottom: 48px
+      &-product
+        width: 280px
+        &__image
+          height: 350px
+        &__title
+          margin-left: 10px
+          font-size: 24px
+          line-height: 32px
+        &__pricetag
+          margin-left: 10px
+          margin-right: 0px
+          font-size: 20px
+          line-height: 36px
+        &__buy-icon
+          margin-left: auto
+          margin-right: 10px
+          +box(23px)
+
+@include min(992px)
+  .trends
+    padding-top: 40px
+    &__wrapper
+      max-width: 920px
+    &__holder
+      flex-direction: row
+      align-items: center
+      margin-bottom: 48px
+      justify-content: space-between
+    &__title
+      margin-bottom: 0
+    &-products
+      &__product
+        margin-bottom: 50px
+      &-product
+        width: 215px
+        &__image 
+          margin-bottom: 20px
+
+@include min(1200px)
+  .trends
+    padding-top: 70px
+    padding-bottom: 35px
+
+    &__wrapper
+      max-width: 1100px
+    &-products
+      &-product
+        width: 245px
+
+@include min(1440px)
+  .trends
+    &__wrapper
+      max-width: 1135px
+    &-products
+      &-product
+        width: 260px
+
+
