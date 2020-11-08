@@ -66,7 +66,10 @@
             opacity: 1
             width: 100%
           
-
+@include min(576px)
+  .header
+    &-menu
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
 
 @include min(768px)
   .header
@@ -79,11 +82,13 @@
       position: unset
       display: flex
       flex-direction: row
+      align-items: center
       width: fit-content
       margin-left: auto
       padding: 0
       font-size: 16px
       background-color: unset
+      box-shadow: 0 0 0px rgba(0, 0, 0, 0)
       &__list
         flex-direction: row
         margin-right: 50px
