@@ -1,0 +1,159 @@
+.subscribe
+	padding: 64px 0
+	background: url('./assets/image/oval__left-img.svg') 101% bottom / 1186px no-repeat,
+	url('./assets/image/oval__right-img.svg') -20% top / 1186px no-repeat
+	background-color: $blue-toxic
+
+	&__wrapper
+		display: flex
+		flex-direction: column
+		align-items: center
+		max-width: 280px * 100% / 320px
+
+	&__holder
+		display: flex
+		flex-direction: column
+
+	&__title
+		margin-bottom: 24px
+		font-family: HK Grotesk
+		font-feature-settings: "locl" 0
+		font-style: normal
+		font-weight: bold
+		font-size: 28px
+		line-height: 36px
+		text-align: center
+		letter-spacing: 0.2px
+		color: #FFFFFF
+	&__text
+
+		margin-bottom: 36px
+		max-width: 370px
+		font-style: normal
+		font-weight: normal
+		font-size: 16px
+		line-height: 28px
+		text-align: center
+		color: #FAFAFB
+	&-form
+		display: flex
+		flex-direction: column
+		width: 100%
+		max-width: 447px
+		&__holder
+			margin-bottom: 10px
+			position: relative
+			z-index: 10
+			&::after
+				content: ''
+				position: absolute
+				z-index: 40
+				left: 20px
+				top: 16px
+
+				+box(16px, 18px)
+				background: url('./assets/image/email__icon-img.svg') no-repeat
+				background-size: 16px 18px
+
+			
+		&__input
+			width: 100%
+			height: 48px
+			padding-left: 48px
+			padding-right: 10px
+			border-radius: 8px
+			border: 1px solid #C3CAD9
+			outline: none
+			font-family: Open Sans
+			font-style: normal
+			font-weight: 600
+			font-size: 16px
+			line-height: 22px
+			background-color: #fff
+			&:focus,
+			&:active
+				border: 2px solid #93a9d8
+			&::placeholder
+				color: #959EAD
+		&__button
+			padding: 11px 24px
+			font-size: 18px
+			line-height: 25px
+
+@include min(380px)
+	.subscribe
+		background: url('./assets/image/oval__left-img.svg') 130% bottom / 1186px no-repeat,
+		url('./assets/image/oval__right-img.svg') -30% top / 1186px no-repeat
+
+		background-color: $blue-toxic
+
+@include min(540px)
+	.subscribe
+		background: url('./assets/image/oval__left-img.svg') 150% bottom / 1186px no-repeat,
+		url('./assets/image/oval__right-img.svg') -50% top / 1186px no-repeat
+
+		background-color: $blue-toxic
+		&__title
+			font-size: 32px
+		&__text
+			max-width: 436px
+			font-size: 18px
+			line-height: 32px
+
+@include min(660px)
+	.subscribe
+		background: url('./assets/image/oval__left-img.svg') 170% bottom / 1186px no-repeat,
+		url('./assets/image/oval__right-img.svg') -70% top / 1186px no-repeat
+
+		background-color: $blue-toxic
+
+@include min(768px)
+	.subscribe
+		padding-top: 72px
+		padding-bottom: 80px
+		background: url('./assets/image/oval__left-img.svg') 158% 108% / 1186px no-repeat,
+		url('./assets/image/oval__right-img.svg') -94% -30% / 1186px no-repeat
+
+		background-color: $blue-toxic
+		&__title
+			font-size: 48px
+			line-height: 60px
+
+		&-form
+			position: relative
+			&__holder
+				margin-bottom: 0
+				&::after
+					top: 20px
+			&__input
+				height: 56px
+			&__button
+				position: absolute
+				z-index: 60
+				top: 4.5px
+				right: 4.5px
+				padding: 9px 27px
+				border-radius: 4px
+
+@include min(844px)
+	.subscribe
+		background: url('./assets/image/oval__left-img.svg') -643px bottom / 1186px no-repeat,
+		url('./assets/image/oval__right-img.svg') calc(643px + 100%) top / 1186px no-repeat
+		background-color: $blue-toxic
+
+
+
+@include min(1200px)
+	.subscribe
+		&__wrapper
+			flex-direction: row
+			justify-content: space-between
+			max-width: 1077px
+		&__holder
+			align-items: flex-start
+		&__title
+			margin-bottom: 14px
+			text-align: left
+		&__text
+			margin-bottom: 0
+			text-align: left

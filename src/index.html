@@ -24,9 +24,11 @@
 							class="header__logo"
 						/>
 					</noscript>
-					</a>
+				</a>
 
-				<button class="button button-burger button-burger--disktop--hidden"></button>
+				<button
+					class="button button-burger button-burger--disktop--hidden"
+				></button>
 
 				<div class="header-menu header__menu">
 					<button
@@ -532,5 +534,37 @@
 			<!-- /.container -->
 		</section>
 		<!-- /.stories -->
+
+		<section class="subscribe">
+			<div class="container subscribe__wrapper">
+				<div class="subscribe__holder">
+					<h2 class="subscribe__title">Подпишитесь</h2>
+					<span class="subscribe__text">
+						Напишите свой адрес электронной почты.
+						Мы&nbsp;будем присылать вам новости из мира моды.
+					</span>
+				</div>
+				<!-- /.subscribe__holder -->
+
+				<form  id="subscribe-form" class="subscribe-form">
+					<div class="subscribe-form__holder">
+						<input
+							require
+							name="email"
+							type="email"
+							class="subscribe-form__input"
+							placeholder="Ваш Email"
+						/>
+					</div>
+					<!-- /.subscribe-form__holder -->
+					<button class="button button-classic subscribe-form__button">
+						Подписаться
+					</button>
+				</form>
+				<!-- /.subscribe-form -->
+			</div>
+			<!-- /.container subscribe__wrapper -->
+		</section>
+		<!-- /.subscribe -->
 	</body>
 </html>
