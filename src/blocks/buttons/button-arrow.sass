@@ -6,6 +6,7 @@
   border: none
   outline: none
   background-color: transparent
+  text-decoration: none
   &::after
     content: ''
     position: absolute
@@ -29,7 +30,9 @@
     font-size: 18px
     line-height: 25px
     color: $blue-toxic
-    margin-right: 20px
-  &__image
-    +box(13px, 16px)
+    &::after
+      content: url("./assets/image/button__arrow-img.svg")
+      margin-left: 20px
+
+      +box(13px, 16px)
   

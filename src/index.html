@@ -13,8 +13,8 @@
 	<body>
 		<header class="header">
 			<div class="container header__wrapper">
-				<noscript class="loading-lazy">
-					<a class="header__logo-link" href="./index.html">
+				<a class="header__logo-link" href="./index.html">
+					<noscript class="loading-lazy">
 						<img
 							width="90"
 							height="28"
@@ -23,18 +23,16 @@
 							loading="lazy"
 							class="header__logo"
 						/>
+					</noscript>
 					</a>
-				</noscript>
 
-				<button class="button button-burger button-burger--disktop--hidden">
-					<span class="button-burger__line"></span>
-					<span class="button-burger__line"></span>
-					<span class="button-burger__line"></span>
-				</button>
+				<button class="button button-burger button-burger--disktop--hidden"></button>
 
 				<div class="header-menu header__menu">
-          <button class="button header-menu__button-close button-close button-close--disktop--hidden"></button> 
-          <nav class="header-menu__navigation">
+					<button
+						class="button header-menu__button-close button-close button-close--disktop--hidden"
+					></button>
+					<nav class="header-menu__navigation">
 						<ul class="header-menu__list">
 							<li class="header-menu__item">
 								<a href="#" class="header-menu__link">Главная</a>
@@ -67,7 +65,7 @@
 		<section class="banner">
 			<div class="container banner__wrapper">
 				<div class="banner__info">
-					<h3 class="banner__hashtag"># READY TO BE COOL</h3>
+					<span class="banner__hashtag"># READY TO BE COOL</span>
 					<h2 class="banner__title">
 						Каждый может <br />
 						быть крутым <br />
@@ -78,9 +76,9 @@
 						и обновлять свой стиль. Всё это вы можете найти здесь. Начните
 						сейчас.
 					</p>
-					<button class="button button-classic banner__button">
+					<a href="#" class="button button-classic banner__button">
 						Подобрать одежду
-					</button>
+					</a>
 					<!-- /.button button-classic -->
 					<div class="banner__tags">
 						<div class="banner-tag banner__tag">
@@ -171,17 +169,9 @@
 						наличии. Используйте код EHYA20, чтобы получить 20%&nbsp;скидку.
 					</p>
 
-					<button class="button button-arrow promo__button">
+					<a href="#" class="button button-arrow promo__button">
 						<span class="button-arrow__text">Посмотреть коллекцию</span>
-						<noscript class="loading-lazy">
-							<img
-								src="./assets/image/button__arrow.svg"
-								alt="Стрелочка"
-								loading="lazy"
-								class="button-arrow__image"
-							/>
-						</noscript>
-					</button>
+					</a>
 				</div>
 				<!-- /.promo__info -->
 			</div>
@@ -387,17 +377,23 @@
 						</a>
 					</li>
 					<!-- /.trends-products-product -->
-					<button class="button button-more trends-products__button">
-						<noscript class="loading-lazy">
-							<img
-								src="./assets/image/plus.svg"
-								alt="Плюс"
-								loading="lazy"
-								class="button-more__image"
-							/>
-						</noscript>
-						<span class="button-more__text">Смотреть больше коллекций</span>
-					</button>
+					<li class="trends-products-product trends-products__product">
+						<a
+							href="#"
+							class="trends-products-product__link button button-more trends-products__button"
+						>
+							<noscript class="loading-lazy">
+								<img
+									src="./assets/image/plus.svg"
+									alt="Плюс"
+									loading="lazy"
+									class="button-more__image"
+								/>
+							</noscript>
+							<span class="button-more__text">Смотреть больше коллекций</span>
+						</a>
+					</li>
+					<!-- /.trends-products-product -->
 				</ul>
 				<!-- /.trends-products -->
 			</div>
@@ -478,5 +474,63 @@
 		<!-- /.reviews-slider -->
 
 		<hr class="line" />
+
+		<section class="stories">
+			<div class="container stories__wrapper">
+				<div class="stories__holder">
+					<span class="stories__hashtag">Истории</span>
+					<h2 class="stories__title">Это История Fashun</h2>
+					<span class="stories__text">
+						Ознакомьтесь с нашим рассказом о моде. Написано нашим дизайнером и
+						специалистом.
+					</span>
+				</div>
+				<!-- /.stories__holder -->
+
+				<ul class="stories__list">
+					<li class="stories-card stories__card">
+						<noscript class="loading-lazy">
+							<img
+								src="./assets/image/stories__mix.png"
+								alt="Mix & Match Style 01: повседневный и формальный стиль"
+								loading="lazy"
+								class="stories-card__image"
+							/>
+						</noscript>
+
+						<div class="stories-card__info">
+							<h3 class="stories-card__title">
+								Mix & Match Style 01: повседневный и формальный стиль
+							</h3>
+							<a href="#" class="stories-card__link">Читать далее</a>
+						</div>
+						<!-- /.stories-card__info -->
+					</li>
+					<!-- /.stories-card -->
+					<li class="stories-card stories__card">
+						<noscript class="loading-lazy">
+							<img
+								src="./assets/image/stories__lifehack.png"
+								alt="Лайфхак: Купите одежду Thrifft на воскресном рынке"
+								loading="lazy"
+								class="stories-card__image"
+							/>
+						</noscript>
+
+						<div class="stories-card__info">
+							<h3 class="stories-card__title">
+								Лайфхак: Купите одежду Thrifft на воскресном рынке
+							</h3>
+							<a href="#" class="stories-card__link">Читать далее</a>
+						</div>
+						<!-- /.stories-card__info -->
+					</li>
+					<!-- /.stories-card -->
+				</ul>
+				<!-- /.stories__list -->
+			</div>
+			<!-- /.container -->
+		</section>
+		<!-- /.stories -->
 	</body>
 </html>

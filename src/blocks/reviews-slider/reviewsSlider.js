@@ -1,6 +1,6 @@
 import 'swiper/swiper-bundle.css';
-import Swiper, { Pagination } from 'swiper';
-Swiper.use([Pagination]);
+import Swiper, { Pagination, Autoplay } from 'swiper';
+Swiper.use([Pagination, Autoplay]);
 
 const reviewsSlider = () => {
 	const swiper = new Swiper('.reviews-slider__container', {
@@ -14,6 +14,9 @@ const reviewsSlider = () => {
 			clickable: true,
 		},
 		autoHeight: true,
+		autoplay: {
+			delay: 5000,
+		},
 	});
 
 	// fix autoheight

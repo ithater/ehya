@@ -1,0 +1,186 @@
+.stories
+	padding: 47px 0 64px
+	&__wrapper
+		display: flex
+		flex-direction: column
+		max-width: 87.5%
+		align-items: center
+		@include min(450px)
+			max-width: 358px
+		@include min(576px)
+			max-width: 400px
+		@include min(768px)
+			max-width: 682px
+		@include min(992px)
+			max-width: 900px
+		@include min(1200px)
+			max-width: 1090px
+		@include min(1440px)
+			max-width: 1150px
+	&__holder
+		display: flex
+		flex-direction: column
+		align-items: center
+		margin-bottom: 26px
+	&__hashtag
+		margin-bottom: 24px
+		padding: 2px 12px
+		font-style: normal
+		font-weight: 600
+		font-size: 14px
+		line-height: 20px
+		text-align: center
+		text-transform: uppercase
+		color: #36B37E
+		background: rgba(54, 179, 126, 0.1)
+		border-radius: 2000px
+	&__title
+		margin-bottom: 18px
+		font-family: HK Grotesk
+		font-feature-settings: "locl" 0
+		font-style: normal
+		font-weight: bold
+		font-size: 28px
+		line-height: 36px
+		text-align: center
+		letter-spacing: 0.2px
+		color: $blue-dark
+	&__text
+		font-style: normal
+		font-weight: normal
+		font-size: 16px
+		line-height: 28px
+		text-align: center
+		color: $text
+	&__list
+		display: flex
+		flex-direction: column
+		list-style: none
+		margin: 0
+		padding: 0
+	&__card
+		&:not(:last-child)
+			margin-bottom: 24px
+
+	&-card
+		&__image
+			border-radius: 8px 8px 0px 0px
+			width: 96.4285%
+			height: 277px
+			object-fit: cover
+		&__info
+			position: relative
+			z-index: 20
+			margin-left: 10px
+			margin-top: -23px
+			padding: 20px
+			width: 96.4285%
+			background: #FAFDFF
+			// transform: translate(10px, -23px)
+		&__title
+			margin-bottom: 16px
+			font-family: HK Grotesk
+			font-feature-settings: "locl" 0
+			font-style: normal
+			font-weight: 500
+			font-size: 20px
+			line-height: 24px
+			letter-spacing: 0.2px
+			color: $blue-dark
+		&__link
+			position: relative
+			font-style: normal
+			font-weight: 600
+			font-size: 16px
+			line-height: 22px
+			color: $blue-toxic
+			text-decoration: none
+			@include smart-hover
+				&::after
+					content: ''
+					position: absolute
+					top: calc( 100% + 2px )
+					left: 0
+					display: block
+					height: 2px
+					width: 0
+					background-color: $blue-toxic
+					transition: .2s
+					opacity: 0
+				&:hover
+					&::after
+						opacity: 1
+						width: 100%
+
+@include min(768px)
+	.stories
+		padding-top: 79px
+		padding-bottom: 80px - 24px //24px is card margin
+		&__holder
+			margin-bottom: 36px
+			max-width: 568px
+		&__text
+			max-width: 466px
+		&__list
+			flex-direction: row
+			flex-wrap: wrap
+		&__card
+		&-card
+			width: 332px
+			&:not(:nth-child(2n))
+				margin-right: 18px
+			&__image
+				+box(322px, 317px)
+				object-fit: cover
+			&__info
+				width: 322px
+			&__title
+				margin-bottom: 12px
+				max-width: 260px
+				font-size: 22px
+				line-height: 32px
+
+@include min(992px)
+	.stories
+		padding-top: 120px
+		padding-bottom: 140px - 24px //24px is card margin
+		&__title
+			font-size: 48px
+			line-height: 60px
+		&__text
+			font-size: 20px
+			line-height: 36px
+		&-card
+			width: 441px
+			&__image
+				+box(431px, 317px)
+				object-fit: cover
+			&__info
+				width: 431px
+
+@include min(1200px)
+	.stories
+		padding-top: 120px
+		padding-bottom: 140px - 24px //24px is card margin
+		&__wrapper
+			flex-direction: row
+			justify-content: space-between
+		&__holder
+			align-items: flex-start
+			max-width: 392px
+		&__title
+			text-align: start
+		&__text
+			text-align: start
+		&__list
+			padding-top: 10px
+			width: 662px
+		&__card
+		&-card
+			width: 322px
+			&__image
+				+box(312px, 317px)
+				object-fit: cover
+			&__info
+				width: 312px
+

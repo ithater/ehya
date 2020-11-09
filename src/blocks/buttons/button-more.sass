@@ -1,12 +1,19 @@
 .button-more
   display: inline-flex
+  text-decoration: none
   flex-direction: column
   align-items: center
-  +box(48.2758%, 170px)
-  border: none
+  +box(100%, 170px)
+  padding: 0 5px
+  border: 2px solid transparent
   outline: none
   border-radius: 8px
   background-color: $blue-toxic
+  @include smart-hover
+    transition: .5s
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0)
+    &:hover
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5)
   &__image
     margin-top: 40px
     +box(25px)
