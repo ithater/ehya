@@ -1,0 +1,80 @@
+.reviews-slider
+  padding-top: 24px
+  padding-bottom: 64px
+  &__container
+    display: flex
+    align-items: center
+    flex-direction: column
+    width: 100%
+    overflow: hidden
+  &__image
+    +box(70px, 81px)
+  &-slide
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__text
+      max-width: 280px
+      margin-bottom: 24px
+      font-family: HK Grotesk
+      font-feature-settings: "locl" 0
+      font-style: normal
+      font-weight: normal
+      font-size: 18px
+      line-height: 36px
+      text-align: center
+      letter-spacing: 0.12px
+      color: $blue-dark
+    &__author
+      font-family: HK Grotesk
+      font-feature-settings: "locl" 0
+      font-style: normal
+      font-weight: bold
+      font-size: 20px
+      line-height: 24px
+      text-align: center
+      letter-spacing: 0.2px
+      color: $blue-dark
+  &__pagination
+    margin-top: 24px
+  &-pagination
+    display: flex
+    justify-content: center
+    &__dot
+      +box(5px)
+      background: #B3BAC5
+      border-radius: 2.5px
+      &:not(:last-child)
+        margin-right: 16px
+      &--active
+        background: #183B56
+
+@include min(768px)
+  .reviews-slider
+    padding-top: 32px
+    padding-bottom: 80px
+    &__image
+      +box(80px, 92px)
+    &-slide
+      &__text
+        max-width: 630px
+        margin-bottom: 24px
+        font-size: 20px
+        line-height: 42px
+        text-align: center
+        letter-spacing: 0.133333px  
+    &__pagination
+      margin-top: 28px
+
+@include min(1200px)
+  .reviews-slider
+    padding-top: 65px
+    padding-bottom: 80px
+    &-slide
+      &__text
+        max-width: 800px
+        margin-top: 24px
+        margin-bottom: 28px
+    &__pagination
+      margin-top: 48px
+    

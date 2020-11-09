@@ -19,9 +19,6 @@ body
     max-width: 1080px
   @include min(1440px)
     max-width: 1140px
-
-
-
   // @include min_1200
   //   max-width: 960px
   // desktop-first
@@ -42,3 +39,13 @@ img
   width: 100%
 button
   cursor: pointer
+.line
+  margin: 0
+  border: none
+  height: 1px
+  width: 100%
+  background-color: #E5EAF4
+  @include min(768px)
+    width: 728px
+  @include min(1140px)
+    width: 1140px
