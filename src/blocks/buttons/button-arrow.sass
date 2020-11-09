@@ -1,38 +1,35 @@
 .button-arrow
-  position: relative
-  display: inline-flex
-  align-items: center
-  padding: 0
-  border: none
-  outline: none
-  background-color: transparent
-  text-decoration: none
-  &::after
-    content: ''
-    position: absolute
-    top: calc( 100% + 2px )
-    left: 0
-    display: block
-    width: 0%
-    opacity: 0
-    height: 2px
-    background-color: $blue-toxic
-  @include smart-hover
-    &::after
-      transition: .2s
-    &:hover
-      &::after
-        opacity: 1
-        width: 100%
-  &__text
-    font-style: normal
-    font-weight: bold
-    font-size: 18px
-    line-height: 25px
-    color: $blue-toxic
-    &::after
-      content: url("./assets/image/button__arrow-img.svg")
-      margin-left: 20px
-
-      +box(13px, 16px)
-  
+	position: relative
+	display: inline-flex
+	align-items: center
+	padding: 0
+	border: none
+	outline: none
+	background-color: transparent
+	text-decoration: none
+	background-color: $blue-toxic
+	@include smart-hover
+		&::after
+			content: ''
+			position: absolute
+			top: calc( 100% + 2px )
+			left: 0
+			display: block
+			width: 0%
+			opacity: 0
+			height: 2px
+			transition: .5s
+		&:hover
+			&::after
+				opacity: 1
+				width: 100%
+	&__text
+		font-style: normal
+		font-weight: bold
+		font-size: 18px
+		line-height: 25px
+		color: $blue-toxic
+		&::after
+			content: url("./assets/image/button__arrow-img.svg")
+			margin-left: 20px
+			+box(13px, 16px)

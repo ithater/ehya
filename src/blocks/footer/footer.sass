@@ -1,0 +1,158 @@
+.footer
+	padding-top: 48px
+	padding-bottom: 73px
+	&__wrapper
+		display: flex
+		flex-direction: column
+		max-width: 252px * 100% / 320px
+	&__nav
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: 67px
+	&__group
+		margin: 0
+		&:not(:last-child)
+			margin-bottom: 30px
+	&-group
+		padding: 0
+		min-width: 165px
+		list-style: none
+		&:not(:nth-child(2n))
+			margin-right: 25px
+
+		&__title
+			font-style: normal
+			font-weight: bold
+			font-size: 16px
+			line-height: 22px
+			color: $blue-dark
+		&__item
+			&:first-child
+				margin-bottom: 20px
+			&:not(:first-child):not(:last-child)
+				margin-bottom: 15px
+		&__link
+			position: relative
+			font-style: normal
+			font-weight: normal
+			font-size: 14px
+			line-height: 20px
+			text-decoration: none
+			color: $blue-dark
+			z-index: 5
+			@include smart-hover
+				&::after
+					content: ''
+					position: absolute
+					top: calc( 100% + 2px )
+					left: 0
+					display: block
+					width: 0%
+					opacity: 0
+					height: 2px
+					transition: .4s
+					z-index: 10
+					background-color: $blue-dark
+				&:hover
+					&::after
+						opacity: 1
+						width: 100%
+	&__info
+		display: flex
+		flex-direction: column
+		align-items: center
+	&__logo
+		margin-bottom: 16px
+	&__title
+		margin-bottom: 16px
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 24px
+		text-align: center
+		color: #5A7184
+	&-social-networkings
+		display: flex
+		justify-content: center
+
+		&__link
+			border: 1px solid transparent
+			border-radius: 50%
+			@include smart-hover
+				transition: .5s
+				&:hover
+					transform: scale(1.1)
+			&:not(:last-child)
+				margin-right: 7px
+
+@include min(768px)
+	.footer
+		padding-top: 64px
+		padding-bottom: 130px - 48px // 48px is a group element margin
+		&__wrapper
+			flex-direction: row
+			justify-content: space-between
+			max-width: 641px * 100% / 768px
+			margin: 0 0 0 59px
+		&__nav
+			width: 358px
+			margin-bottom: 0
+		&__group
+			margin-bottom: 48px
+		&__info
+			align-items: flex-start
+			min-width: 253px
+			order: -1
+		&__logo
+			margin-bottom: 28px
+		&__title
+			margin-bottom: 32px
+			font-size: 16px
+			line-height: 28px
+			text-align: left
+
+@include min(992px)
+	.footer
+		&__wrapper
+			margin: auto
+
+@include min(1200px)
+	.footer
+		padding-top: 128px
+		padding-bottom: 130px
+		&__wrapper
+			flex-direction: row
+			justify-content: space-between
+			max-width: 1042px
+			margin: auto
+		&__nav
+			min-width: 750px
+			max-width: 750px
+			margin-bottom: 0
+		&__group
+			&:not(:last-child)
+				margin-bottom: 0
+				margin-right: 30px
+		&__info
+			align-items: flex-start
+			min-width: 253px
+			order: -1
+		&__logo
+			margin-bottom: 28px
+		&__title
+			margin-bottom: 32px
+			font-size: 16px
+			line-height: 28px
+			text-align: left
+
+
+@include min(1440px)
+	.footer
+		padding-bottom: 130px
+		&__wrapper
+			justify-content: start
+			max-width: 1140px
+			margin: auto
+		&__info
+			margin-right: 29px
+			width: 263px
