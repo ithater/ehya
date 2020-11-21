@@ -7,7 +7,6 @@
 	outline: none
 	background-color: transparent
 	text-decoration: none
-	background-color: $blue-toxic
 	@include smart-hover
 		&::after
 			content: ''
@@ -19,6 +18,7 @@
 			opacity: 0
 			height: 2px
 			transition: .5s
+			background-color: $blue-toxic
 		&:hover
 			&::after
 				opacity: 1
