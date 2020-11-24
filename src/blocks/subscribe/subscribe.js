@@ -29,10 +29,16 @@ const subscribe = () => {
 		if (validation.isValid === false) return;
 
 		const formData = new FormData(this.form);
-		const post = fetch('./assets/php/send.php', {
+		fetch('./assets/php/send.php', {
 			method: 'POST',
 			body: formData
-		}).catch(err => console.error(err));
+		})
+			.then(() => {
+				evt.target.querySelectorAll('input').forEach(item => {
+					item.value = '';
+				});
+			})
+			.catch(err => console.error(err));
 
 	};
 

@@ -36,7 +36,7 @@ try {
     $mail->setFrom('info@ithater.ru', 'ithater'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
-    $mail->addAddress('nerusini@mail.ru');  
+    $mail->addAddress($email);  
 
 // Отправка сообщения
 $mail->isHTML(true);
