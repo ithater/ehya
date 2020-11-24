@@ -32,10 +32,7 @@ const subscribe = () => {
 		const post = fetch('./assets/php/send.php', {
 			method: 'POST',
 			body: formData
-		})
-			.then(resp => {
-				console.log(resp);
-			});
+		}).catch(err => console.error(err));
 
 	};
 

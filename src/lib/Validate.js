@@ -64,7 +64,6 @@ export default class Validate {
 	}
 
 	hideMessage(inputData) {
-		console.log('inputData: ', inputData);
 		if (inputData.isDisplayed) {
 			inputData.$error.remove();
 			inputData.isDisplayed = false;
@@ -72,7 +71,6 @@ export default class Validate {
 	}
 
 	showRequireMessage(inputData) {
-		console.log('inputData: ', inputData);
 		if (inputData.isDisplayed) {
 			inputData.$error.textContent = inputData.messages.require;
 		} else {
@@ -83,7 +81,6 @@ export default class Validate {
 	}
 
 	showFuncMessage(inputData) {
-		console.log('inputData: ', inputData);
 		if (inputData.isDisplayed) {
 			inputData.$error.textContent = inputData.messages.func;
 		} else {
