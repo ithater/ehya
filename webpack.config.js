@@ -108,10 +108,10 @@ module.exports = {
 					from: `${PATHS.src}/${PATHS.assets}/image`,
 					to: `${PATHS.dist}/${PATHS.assets}/image`,
 				},
-				// {
-				//   from: `${PATHS.src}/${PATHS.assets}/fonts`,
-				//   to: `${PATHS.dist}/${PATHS.assets}/fonts`,
-				// },
+				{
+				  from: `${PATHS.src}/${PATHS.assets}/php`,
+				  to: `${PATHS.dist}/${PATHS.assets}/php`,
+				},
 			],
 		}),
 		new MiniCssExtractPlugin({

@@ -18,7 +18,7 @@ const subscribe = () => {
 				}
 			}
 		],
-		errorClass: 'invalid'
+		errorClass: 'invalid-input'
 	});
 
 
@@ -29,9 +29,14 @@ const subscribe = () => {
 		if (validation.isValid === false) return;
 
 		const formData = new FormData(this.form);
-		const body = {};
-		formData.forEach((val, key) => body[key] = val);
-		console.log('body: ', body);
+		const post = fetch('./assets/php/send.php', {
+			method: 'POST',
+			body: formData
+		})
+			.then(resp => {
+				console.log(resp);
+			});
+
 	};
 
 
